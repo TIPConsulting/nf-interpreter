@@ -64,8 +64,10 @@ struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_
 struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_Sleep
 {
     NANOCLR_NATIVE_DECLARE(NativeEnableWakeupByTimer___STATIC__nanoFrameworkHardwareEsp32EspNativeError__U8);
-    NANOCLR_NATIVE_DECLARE(NativeEnableWakeupByPin___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32SleepWakeupGpioPin__I4);
-    NANOCLR_NATIVE_DECLARE(NativeEnableWakeupByMultiPins___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32SleepWakeupGpioPin__nanoFrameworkHardwareEsp32SleepWakeupMode);
+    NANOCLR_NATIVE_DECLARE(
+        NativeEnableWakeupByPin___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32SleepWakeupGpioPin__I4);
+    NANOCLR_NATIVE_DECLARE(
+        NativeEnableWakeupByMultiPins___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32SleepWakeupGpioPin__nanoFrameworkHardwareEsp32SleepWakeupMode);
     NANOCLR_NATIVE_DECLARE(NativeEnableWakeupByTouchPad___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
     NANOCLR_NATIVE_DECLARE(NativeStartLightSleep___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
     NANOCLR_NATIVE_DECLARE(NativeStartDeepSleep___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
@@ -81,11 +83,11 @@ struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_
     static const int FIELD___touchHighVolt = 1;
     static const int FIELD___touchLowVolt = 2;
     static const int FIELD___touchVoltAtten = 3;
-    static const int FIELD___touchPadFilterTouchPeriod = 4;
-    static const int FIELD___touchPadReadMode = 5;
+    static const int FIELD___touchTriggerMode = 4;
+    static const int FIELD___touchPadFilterTouchPeriod = 5;
+    static const int FIELD___touchPadReadMode = 6;
 
     //--//
-
 };
 
 struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_TouchPad
@@ -107,7 +109,6 @@ struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_
     NANOCLR_NATIVE_DECLARE(NativeTouchPadSetThresh___STATIC__nanoFrameworkHardwareEsp32EspNativeError__I4__U2);
 
     //--//
-
 };
 
 struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_TouchPadConfig
@@ -117,7 +118,6 @@ struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_
     static const int FIELD___interruptThresholdValue = 3;
 
     //--//
-
 };
 
 struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_TouchPadController
@@ -133,9 +133,12 @@ struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_
 
     NANOCLR_NATIVE_DECLARE(NativeTouchPadInit___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
     NANOCLR_NATIVE_DECLARE(NativeTouchPadDeinit___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
-    NANOCLR_NATIVE_DECLARE(NativeTouchPadSetFsmMode___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32TouchFsmMode);
-    NANOCLR_NATIVE_DECLARE(NativeTouchPadSetVoltage___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32TouchHighVolt__nanoFrameworkHardwareEsp32TouchLowVolt__nanoFrameworkHardwareEsp32TouchVoltAtten);
-    NANOCLR_NATIVE_DECLARE(NativeTouchPadSetTriggerMode___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32TouchTriggerMode);
+    NANOCLR_NATIVE_DECLARE(
+        NativeTouchPadSetFsmMode___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32TouchFsmMode);
+    NANOCLR_NATIVE_DECLARE(
+        NativeTouchPadSetVoltage___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32TouchHighVolt__nanoFrameworkHardwareEsp32TouchLowVolt__nanoFrameworkHardwareEsp32TouchVoltAtten);
+    NANOCLR_NATIVE_DECLARE(
+        NativeTouchPadSetTriggerMode___STATIC__nanoFrameworkHardwareEsp32EspNativeError__nanoFrameworkHardwareEsp32TouchTriggerMode);
     NANOCLR_NATIVE_DECLARE(NativeTouchPadFilterStart___STATIC__nanoFrameworkHardwareEsp32EspNativeError__U4);
     NANOCLR_NATIVE_DECLARE(NativeTouchPadSetFilterPeriod___STATIC__nanoFrameworkHardwareEsp32EspNativeError__U4);
     NANOCLR_NATIVE_DECLARE(NativeTouchPadFilterStop___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
@@ -143,14 +146,15 @@ struct Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_
     NANOCLR_NATIVE_DECLARE(NativeTouchPadDisableInterrupts___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
     NANOCLR_NATIVE_DECLARE(NativeTouchPadClearInterrupts___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
     NANOCLR_NATIVE_DECLARE(NativeTouchPadIsrRegister___STATIC__nanoFrameworkHardwareEsp32EspNativeError__SystemAction);
-    NANOCLR_NATIVE_DECLARE(NativeTouchPadIsrDeregister___STATIC__nanoFrameworkHardwareEsp32EspNativeError__SystemAction);
+    NANOCLR_NATIVE_DECLARE(
+        NativeTouchPadIsrDeregister___STATIC__nanoFrameworkHardwareEsp32EspNativeError__SystemAction);
     NANOCLR_NATIVE_DECLARE(NativeTouchpadGetStatus___STATIC__U4);
     NANOCLR_NATIVE_DECLARE(NativeTouchpadClearStatus___STATIC__nanoFrameworkHardwareEsp32EspNativeError);
     NANOCLR_NATIVE_DECLARE(NativeDispose___STATIC__VOID);
 
     //--//
-
 };
+
 extern const CLR_RT_NativeAssemblyData g_CLR_AssemblyNative_nanoFramework_Hardware_Esp32;
 
 #endif //_NANOFRAMEWORK_HARDWARE_ESP32_NATIVE_H_
