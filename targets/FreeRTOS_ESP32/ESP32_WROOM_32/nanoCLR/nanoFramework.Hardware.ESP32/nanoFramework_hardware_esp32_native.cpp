@@ -90,6 +90,8 @@ static const CLR_RT_MethodHandler method_lookup[] =
     NULL,
     NULL,
     NULL,
+    NULL,
+    NULL,
     Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_TouchPad::NativeTouchPadReadRawData___U2__I4,
     Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_TouchPad::NativeTouchPadConfig___STATIC__nanoFrameworkHardwareEsp32EspNativeError__I4__U2,
     Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32_TouchPad::NativeTouchPadRead___STATIC__U2__I4,
@@ -141,7 +143,7 @@ static const CLR_RT_MethodHandler method_lookup[] =
 const CLR_RT_NativeAssemblyData g_CLR_AssemblyNative_nanoFramework_Hardware_Esp32 =
 {
     "nanoFramework.Hardware.Esp32",
-    0xFCEE5479,
+    0xAEB1DCAF,
     method_lookup,
     { 100, 0, 7, 1 }
 };
