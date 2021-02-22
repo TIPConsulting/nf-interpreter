@@ -14,7 +14,7 @@ HRESULT Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32
     NativeTouchPadReadRawData___U2__I4(CLR_RT_StackFrame &stack)
 {
     NANOCLR_HEADER();
-    uint16_t pinVal = 0;
+    uint16_t pinVal;
     {
         touch_pad_t pinNum = (touch_pad_t)stack.Arg0().NumericByRef().s4;
         touch_pad_read_raw_data(pinNum, &pinVal);
@@ -50,7 +50,7 @@ HRESULT Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32
     NativeTouchPadRead___STATIC__U2__I4(CLR_RT_StackFrame &stack)
 {
     NANOCLR_HEADER();
-    uint16_t pinVal = 0;
+    uint16_t pinVal;
     {
         touch_pad_t pinNum = (touch_pad_t)stack.Arg0().NumericByRef().s4;
         touch_pad_read(pinNum, &pinVal);
@@ -71,7 +71,7 @@ HRESULT Library_nanoFramework_hardware_esp32_native_nanoFramework_Hardware_Esp32
     NativeTouchPadReadFiltered___STATIC__U2__I4(CLR_RT_StackFrame &stack)
 {
     NANOCLR_HEADER();
-    uint16_t pinVal = 0;
+    uint16_t pinVal;
     {
         touch_pad_t pinNum = (touch_pad_t)stack.Arg0().NumericByRef().s4;
         touch_pad_read_filtered(pinNum, &pinVal);
